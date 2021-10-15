@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Eval expression </title>
+    </head>
+<body>
+    <h1> eval expression</h1>
+
+    <input type="text" id="exp">
+    <input class="bnt-egal" type="button" value="=">
+
+
+    <script type="text/javascript">
+
+        const btnEgal = document.querySelector(".bnt-egal")
+
+        btnEgal.addEventListener("click", () => {
+            let expression = document.getElementById("exp")
+            console.log(expression.value)
+            let result = eval(expression.value)
+
+            alert(`resultat de l'expression : ${result}`)
+            
+            const baliseAffuchaage = document.createElement("h3")
+            baliseAffuchaage.innerText = `resultat de l'expression : ${result}`
+            document.querySelector("body").appendChild(baliseAffuchaage);
+        })
+
+    </script>
+
+</body>
+</html>
